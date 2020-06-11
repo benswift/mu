@@ -19,13 +19,13 @@ jobs:
       - uses: actions/checkout@v2
 
       - if: contains(matrix.os, 'ubuntu')
-        name: deps
+        name: ubuntu-deps
         run: |
           sudo apt update
           sudo apt-get install automake autoconf-archive autotools-dev libglib2.0-dev libxapian-dev libgmime-3.0-dev m4 make libtool pkg-config
 
       - if: contains(matrix.os, 'macos')
-        name: deps
+        name: macos-deps
         run: |
           brew install autoconf automake libgpg-error libtool pkg-config gettext glib gmime xapian
 
