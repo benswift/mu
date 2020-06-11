@@ -23,7 +23,7 @@ jobs:
         name: deps
         run: |
           sudo apt update
-          sudo apt-get install lib libxapian-dev libgmime-3.0-dev
+          sudo apt-get install automake autoconf-archive autotools-dev libglib2.0-dev libxapian-dev libgmime-3.0-dev m4 make libtool pkg-config
 
       - name: configure
         run: ./autogen.sh
