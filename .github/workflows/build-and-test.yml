@@ -13,7 +13,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - macOS
+          - macos-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -24,7 +24,7 @@ jobs:
           sudo apt update
           sudo apt-get install automake autoconf-archive autotools-dev libglib2.0-dev libxapian-dev libgmime-3.0-dev m4 make libtool pkg-config
 
-      - if: contains(matrix.os, 'macOS')
+      - if: contains(matrix.os, 'macos')
         name: deps
         run: |
           brew install autoconf automake libgpg-error libtool pkg-config gettext glib gmime xapian
